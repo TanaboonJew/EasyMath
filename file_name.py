@@ -23,3 +23,15 @@ def generate_file_name(times, directory):
     filename = f"{directory}/{base_filename}_{count}.docx"
 
     return filename
+
+def get_name(times, directory):
+    base_filename = f"{times*100}_questions"
+    filename = f"{directory}/{base_filename}_1.docx"
+
+    count = 1
+    while os.path.exists(filename):
+        count += 1
+        filename = f"{directory}/{base_filename}_{count}.docx"
+    filename = f"{base_filename}_{count-1}.docx"
+    
+    return filename

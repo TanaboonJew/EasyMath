@@ -1,6 +1,6 @@
 import questions_gen as qGen
 import os
-import file_name_gen as nameGen
+import file_name as nameGen
 from tqdm import tqdm
 from docx import Document
 from docx.shared import Pt, Inches
