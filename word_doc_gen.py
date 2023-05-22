@@ -7,7 +7,7 @@ from docx.shared import Pt, Inches
 from docx.enum.section import WD_ORIENTATION
 
 
-def generate_word_document(times):
+def generate_word_document(times, directory):
     document = Document()
 
     style = document.styles['Normal']
@@ -61,14 +61,6 @@ def generate_word_document(times):
             if time != times - 1:
                 document.add_page_break()
 
-    directory = "Generated_Problems"
-    if not os.path.exists(directory):
-        try:
-            os.makedirs(directory)
-        except Exception as e:
-            print("\033[91m\nA critical error occurred. Please contact the programmer.")
-            print("Error:", str(e), "\033[0m")
-            sys.exit(1)
 
     filename = nameGen.generate_file_name(times, directory)
     document.save(filename)
