@@ -23,7 +23,9 @@ This repository contains a Python application that generates simple math questio
     git clone https://github.com/TanaboonJew/EasyMath
 
 2. Install the required Python packages:
-    pip install python-docx docx2pdf tqdm
+
+    ```bash
+    pip install requirements.txt
     
 3. Navigate to the repository directory:
     cd EasyMath
