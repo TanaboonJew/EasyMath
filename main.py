@@ -38,6 +38,7 @@ def main():
     while True:
         try:
             times = int(input("\033[96m\nPlease input the desired number of pages> \033[0m"))
+            all_ques = quesGen.generate_questions(times)
             break
         except ValueError:
             print("\033[91m\nInput is Invalid, Please Input an Integer.\033[0m")

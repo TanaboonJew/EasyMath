@@ -1,4 +1,3 @@
-import questions_gen as qGen
 import os
 import file_name as nameGen
 from tqdm import tqdm
@@ -7,7 +6,7 @@ from docx.shared import Pt, Inches
 from docx.enum.section import WD_ORIENTATION
 
 
-def generate_word_document(times, directory):
+def generate_word_document(times, directory, all_ques):
     document = Document()
 
     style = document.styles['Normal']
@@ -28,7 +27,7 @@ def generate_word_document(times, directory):
 
     if times < 20:
         for time in range(times):
-            questions = qGen.generate_questions()
+            questions = all_ques[time]
 
             table = document.add_table(rows=25, cols=column_count)
             table.autofit = False
@@ -45,7 +44,7 @@ def generate_word_document(times, directory):
                 document.add_page_break()
     else:
         for time in tqdm (range (times), desc="Generating Questions", ncols=80):
-            questions = qGen.generate_questions()
+            questions = all_ques[time]
 
             table = document.add_table(rows=25, cols=column_count)
             table.autofit = False
