@@ -22,10 +22,13 @@ This repository contains a Python application that generates simple math questio
    ```bash
     git clone https://github.com/TanaboonJew/EasyMath
 
-2. Install the required Python packages:
+2. Install the required Python packages using a virtual environment (recommended):
 
     ```bash
-    pip install requirements.txt
+    cd EasyMath
+    python -m venv myenv
+    source myenv/bin/activate
+    pip install -r requirements.txt
     
 3. Navigate to the repository directory:
 
