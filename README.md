@@ -28,9 +28,13 @@ This repository contains a Python application that generates simple math questio
     pip install requirements.txt
     
 3. Navigate to the repository directory:
+
+    ```bash
     cd EasyMath
 
 4. Run the application:
+
+    ```bash
     python main.py
 
 5. Follow the on-screen prompts to specify the number of pages, output format (PDF or Word), and the directory to save the generated files.
