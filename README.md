@@ -27,7 +27,7 @@ This repository contains a Python application that generates simple math questio
     ```bash
     cd EasyMath
     python -m venv myenv
-    source myenv/bin/activate
+    source myenv/Scripts/activate
     pip install -r requirements.txt
     
 3. Navigate to the repository directory:
