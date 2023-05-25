@@ -45,14 +45,14 @@ def main():
     pdf = input("\033[96m\nDo you want a pdf file? (Y/N)> \033[0m").lower()
     while True:
         if pdf == "y":
-            docGen.generate_word_document(times, directory)
+            docGen.generate_word_document(times, directory, all_ques)
             name = fileName.get_name(times, directory)
             print("\033[93m\nConveting please wait...\033[0m")
             convert(f"{directory}/{name}", f"{directory}/{name[:-4]}pdf")
             print(f"\033[92m\nDocument '{name[:-4]}pdf' saved successfully at '{directory}/{name[:-4]}pdf'.\033[0m")
             break
         elif pdf == "n":
-            docGen.generate_word_document(times, directory)
+            docGen.generate_word_document(times, directory, all_ques)
             break
         else:
             pdf = input("\033[91m\nInput is Invalid, Please Answer Yes(Y) or No(N).\033[0m").lower
