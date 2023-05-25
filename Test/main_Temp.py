@@ -171,7 +171,7 @@ def generate_word_document(times, directory, all_ques):
 
     filename = generate_file_name(times, directory)
     document.save(filename)
-    print(f"\033[92m\nDocument '{filename[19:]}' saved successfully at '{filename}'.\033[0m")
+    print(f"\033[92m\nDocument '{get_name(times, directory)}' saved successfully at '{filename}'.\033[0m")
     
 def main():
     print("\033[92m\nThis application will generate as many simple math questions as you want.")
