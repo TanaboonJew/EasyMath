@@ -1,7 +1,9 @@
+#t1.py
 import pathlib
 import tkinter as tk
 import tkinter.ttk as ttk
 import pygubu
+import main_Temp as mt
 
 PROJECT_PATH = pathlib.Path(__file__).parent
 PROJECT_UI = PROJECT_PATH / "t1.ui"
@@ -21,11 +23,21 @@ class t1:
 
         # 4: Connect callbacks
         builder.connect_callbacks(self)
+        self.builder.get_object("Generate").configure(command=self.run_main)
+    
+    def run_main(self):
+        directory = self.builder.get_object("entry_directory").get()
+        times = int(self.builder.get_object("entry_pages").get())
+        pdf = self.builder.get_object("checkbox_pdf").get()
+        print(pdf)
+        
+        mt.main(directory, times, pdf)
 
     def run(self):
         self.mainwindow.mainloop()
 
 
 if __name__ == '__main__':
+    root = tk.Tk()
     app = t1()
     app.run()
