@@ -7,7 +7,7 @@
       <property name="side">top</property>
     </layout>
     <child>
-      <object class="tk.LabelFrame" id="labelframe1">
+      <object class="ttk.Labelframe" id="labelframe1">
         <property name="height">200</property>
         <property name="text" translatable="yes">labelframe1</property>
         <property name="width">200</property>
@@ -15,41 +15,36 @@
           <property name="side">top</property>
         </layout>
         <child>
-          <object class="tk.Checkbutton" id="checkbutton1">
-            <property name="text" translatable="yes">a±b</property>
+          <object class="ttk.Entry" id="entry_directory" named="True">
+            <property name="justify">center</property>
+            <property name="text" translatable="yes">Generated_Problems</property>
             <layout manager="pack">
               <property name="side">top</property>
             </layout>
           </object>
         </child>
         <child>
-          <object class="tk.Checkbutton" id="checkbutton2">
-            <property name="text" translatable="yes">a±b±c</property>
+          <object class="ttk.Entry" id="entry_pages" named="True">
+            <property name="justify">center</property>
+            <property name="text" translatable="yes">Pages</property>
             <layout manager="pack">
               <property name="side">top</property>
             </layout>
           </object>
         </child>
         <child>
-          <object class="tk.Checkbutton" id="checkbutton3">
-            <property name="text" translatable="yes">a×b</property>
+          <object class="ttk.Checkbutton" id="checkbox_pdf" named="True">
+            <property name="offvalue">n</property>
+            <property name="onvalue">y</property>
+            <property name="text" translatable="yes">PDF?</property>
             <layout manager="pack">
               <property name="side">top</property>
             </layout>
           </object>
         </child>
         <child>
-          <object class="tk.Checkbutton" id="checkbutton4">
-            <property name="text" translatable="yes">a÷b</property>
-            <layout manager="pack">
-              <property name="side">top</property>
-            </layout>
-          </object>
-        </child>
-        <child>
-          <object class="tk.Button" id="button2">
-            <property name="default">normal</property>
-            <property name="text" translatable="yes">button2</property>
+          <object class="ttk.Button" id="Generate" named="True">
+            <property name="text" translatable="yes">Generate</property>
             <layout manager="pack">
               <property name="side">top</property>
             </layout>
